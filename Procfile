@@ -1,0 +1,1 @@
+--spring.config.location=cfg/heroku.properties
