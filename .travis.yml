@@ -1,14 +1,22 @@
 language: java
 sudo: false
+
 install: true
+
 script: mvn clean package -DskipTests=true
-notifications:
-  email:
-    recipients: "-parsentev@yandex.ru"
-    on_success: never
-    on_failure: always
+
 deploy:
   provider: heroku
   api_key:
-    secure: nE6hrz7x84Yr448HemoRq8qVicuNW1VPxpexwqyEODblNqx1qXhes9bLRdSOmnNz33U9f4cM48YVTs7UvwwZ4FEwA8fu7H44iXjU+v6PDAiG+YKHoC+UJCphZEd1ImOWHjEvXTkbmZtr03kwQPPVYd7CFaxMyswGw4gzgoRQbr36SRfAU8/CcL7fU4UGfGx4GYoJNgLkzsTkcqz+hAFslHkv/3oyh6vhOgkDzkvOlfKuMbyypxmmzZ0svTGi4JUu4PL4Qt2SP5OVLOfGT7P5Zbqq5vZnYFWCFy/wB5xLSy19Xvg5Ts5hmJoXcp1bbWsnJPg8S5kNLt1n727tA5dX68Rtf5vRTFP6aT8O2FKawZ4ozpaPuQq+WmChv0cxbMmV5uGMXNp4rPolTRuKFlv+RB5VbY9SR31eH0xYAErzdXqWjC4VSPz9SjqsjIXJsAV/2129RwLJXfdIYUPDCvJxE/MZOuVoAm7YMvL0C+9dlj/zKNwcXwATRRou2ZeDxuU7i585TC/AxntZsnn7HqYi8Zg91O+P7rp1oocuwKwm9tyPhXykCWuzzMWh+EAYlKjvBuhSaXnXZSoPpBIy87oQQkSaegaIx1sVcCBDcXGlg+2eCkps3QmYebRbp4AQrDfmJUy82jyv02OeZCGzIDyOstcvhfeuG2kuTxtufiyET8I=
+    secure: "cyD3d/IPrQ9+A616jHblwVkdX17xU9SmBXF4Lb39Gxbpb2cTBi00QuoW80gVfQicGLlZbUwbnbDR5meOczAf55C0D2/dJpzdhsJPPS15k+2explbxGaZECyhFYxZWcct9Cxi1rr+5T6vf9xp0z8625VcSOCgL4a5KR+FkzEHni+SsP71/KCIB2JljC6p2OY6Tew3I5lsQWKx
+      w1eRnC6IlQD38SeaVEGnDApkhQWCD83jIvyaVv+Xf6RaX4IZ6Pj0k5RqTNRIBOoANwt+oW4N607cedMkPncAYW1K3kN3xfI8LtCGdzkuWb9764bbXTowOqBaNVU6+xDB8GxD/N1f/e23xvo2T72nWEA7IHIBZJd7fZdzDQE3jqnq7+TUj5aAT7JseOnWqsx/XdUyQpYIEkois069COVbGXv
+      8d4nXSgrj/eSwl0WzM5ELgEE/yL4Lmtmpey9uo0vr8COt1XUah6JQUFVXFxgJym8x8c7DN+A7Vj96+Zi4p4toyX5lAe+0DFUI8UWpLBWfVdt0fSSF+XoOTONeXiP0wVjh4juPrCJLgQWTvnwTj8c15v5rQIuESiFZeE7XdOEmzf2O8NUy0FoQDgVDWqm6BYBMdtvaackqO5ttz3ALSGeLJ3
+      YRNfB/jmQqcjgLqK+ZXz6bi83q44ib08sO95LaySuFKqkkh3U="
   app: radiant-forest-56815
+
+notifications:
+  email:
+    recipients:
+      -parsentev@yandex.ru
+    on_success: never # default: change
+    on_failure: always # default: always
