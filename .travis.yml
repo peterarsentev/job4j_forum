@@ -1,19 +1,14 @@
 language: java
 sudo: false
-
 install: true
-
 script: mvn clean package -DskipTests=true
-
+notifications:
+  email:
+    recipients: "-parsentev@yandex.ru"
+    on_success: never
+    on_failure: always
 deploy:
   provider: heroku
   api_key:
-    secure: iIJFqrlgKqd/tzoW3fG5jptflnUndrM9ivwm74Co2O1+hUvfrXhjEoWdwCF2osSprYatGF2nc6wTCepgjRAuay6mwsKOPzaduQECAoliO2+xAZ9hfabPq1hYA4uTXEZzFLMGoBFTNmFYsL4O5ypfwP9Q4gI1T47n1w/JLDbNhcF5Qh+Sn2n2Qfasd/KCqAMnZGQ42xavHQbPsLA85h7dB0gq5t07Xv7CnYUvWegBXSVQ2MG5CRNnBQza+Im9L9VOF7dq7LydbA0q8lQ1fEhFkpXdf4EuFU7zL3Iu/X3mk8MbuLkW2cqa0xuofFD1eoZzDfp4b2xc26U+GmLG7KDDgv0olHT8dbErQpmTEojK5+ny0PZ3eoAIX1RArDCwuvsgwlxg7/jXWUNcJQpATbwVk9YRktqrJqcBrHHj2pa7TBitOZ/hOfBb9MJqukY3sAzvjMOCReJyNmp0z3zPXoVAQMnFjmFDTEtHSi/ojslYSKQ9kavif7tqxQNV+g4WiOPAkIQGlDkOUWXm6BiBhFkVpXVNwyTJhN0W+KYH5AdDmcgq3z8JsERZnrcHZ+JKRYtJFwRZRCU+nbDb9CwTNq6X9DSZ5PrmvYyKjNoB12J3GyDKj8kqs5+S23Aavb4wq/qUK2q2cDtV78xI1O1+C5XE8J670N7LTOvJaJWyGML/KcU=
-  app: stark-depths-71095
-
-notifications:
-  email:
-    recipients:
-      -parsentev@yandex.ru
-    on_success: never # default: change
-    on_failure: always # default: always
+    secure: nE6hrz7x84Yr448HemoRq8qVicuNW1VPxpexwqyEODblNqx1qXhes9bLRdSOmnNz33U9f4cM48YVTs7UvwwZ4FEwA8fu7H44iXjU+v6PDAiG+YKHoC+UJCphZEd1ImOWHjEvXTkbmZtr03kwQPPVYd7CFaxMyswGw4gzgoRQbr36SRfAU8/CcL7fU4UGfGx4GYoJNgLkzsTkcqz+hAFslHkv/3oyh6vhOgkDzkvOlfKuMbyypxmmzZ0svTGi4JUu4PL4Qt2SP5OVLOfGT7P5Zbqq5vZnYFWCFy/wB5xLSy19Xvg5Ts5hmJoXcp1bbWsnJPg8S5kNLt1n727tA5dX68Rtf5vRTFP6aT8O2FKawZ4ozpaPuQq+WmChv0cxbMmV5uGMXNp4rPolTRuKFlv+RB5VbY9SR31eH0xYAErzdXqWjC4VSPz9SjqsjIXJsAV/2129RwLJXfdIYUPDCvJxE/MZOuVoAm7YMvL0C+9dlj/zKNwcXwATRRou2ZeDxuU7i585TC/AxntZsnn7HqYi8Zg91O+P7rp1oocuwKwm9tyPhXykCWuzzMWh+EAYlKjvBuhSaXnXZSoPpBIy87oQQkSaegaIx1sVcCBDcXGlg+2eCkps3QmYebRbp4AQrDfmJUy82jyv02OeZCGzIDyOstcvhfeuG2kuTxtufiyET8I=
+  app: radiant-forest-56815
